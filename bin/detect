@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "AWS CLI Buildpack"
+exit 0
