@@ -9,7 +9,8 @@ indent() {
 }
 
 cd $BUILD_DIR
-export HOME=$BUILD_DIR
+echo $HOME
+
 
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
