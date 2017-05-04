@@ -18,4 +18,4 @@ mkdir bin
 ./awscli-bundle/install -b bin/aws
 mv $HOME/.local $BUILD_DIR
 mkdir .profile.d
-echo 'export PATH=$PATH:$HOME/bin' > .profile.d/setpath
+echo 'PATH=$PATH:$HOME/bin' > .profile.d/setpath.sh
