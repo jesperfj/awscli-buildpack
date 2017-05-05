@@ -12,10 +12,13 @@ cd $BUILD_DIR
 echo $HOME
 
 
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+curl -s "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 mkdir bin
 ./awscli-bundle/install -b bin/aws
 mv $HOME/.local $BUILD_DIR
+rm -rf awscli-bundle
+rm awscli-bundle.zip
+
 mkdir .profile.d
 echo 'PATH=$PATH:$HOME/bin' > .profile.d/setpath.sh
